@@ -1,0 +1,25 @@
+{
+  "name": "eslint-config-sds",
+  "version": "0.0.1",
+  "description": "Shareable ESLint config for sds js projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stratusdata/eslint-config-sds.git"
+  },
+  "author": "stratus data systems, inc.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stratusdata/eslint-config-sds/issues"
+  },
+  "homepage": "https://github.com/stratusdata/eslint-config-sds#readme",
+  "devDependencies": {
+    "babel-eslint": "^4.1.2",
+    "eslint": "^1.4.3",
+    "eslint-plugin-react": "^3.4.1",
+    "react": "^0.13.3"
+  }
+}

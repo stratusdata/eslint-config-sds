@@ -9,7 +9,7 @@ module.exports = {
 		'linebreak-style': [2, 'unix'],
 		'vars-on-top': [0],
 
-		'comma-dangle': [2, 'always-multiline'],    	// http://eslint.org/docs/rules/comma-dangle
+		'comma-dangle': 0,							    	// http://eslint.org/docs/rules/comma-dangle
 		'no-cond-assign': [2, 'always'], 				// http://eslint.org/docs/rules/no-cond-assign
 		'no-console': 1,                 				// http://eslint.org/docs/rules/no-console
 		'no-debugger': 1,                				// http://eslint.org/docs/rules/no-debugger
@@ -28,11 +28,11 @@ module.exports = {
 		'brace-style': [
 			2,               									// http://eslint.org/docs/rules/brace-style
 			'1tbs', {
-				'allowSingleLine': false
+				'allowSingleLine': true
 			}
 		],
 		'quotes': [2, 'single', 'avoid-escape'], 		// http://eslint.org/docs/rules/quotes
-		'id-length': [2, {               				// http://eslint.org/docs/rules/id-length
+		'id-length': [0, {               				// http://eslint.org/docs/rules/id-length
 			'min': 2,
 			'properties': 'never'
 		}],
@@ -44,7 +44,7 @@ module.exports = {
 			'after': true
 		}],
 		'comma-style': [2, 'last'],      				// http://eslint.org/docs/rules/comma-style
-		'eol-last': 2,                  					// http://eslint.org/docs/rules/eol-last
+		'eol-last': 1,                  					// http://eslint.org/docs/rules/eol-last
 		'func-names': 1,                				 	// http://eslint.org/docs/rules/func-names
 			'key-spacing': [2, {             			// http://eslint.org/docs/rules/key-spacing
 			'beforeColon': false,
@@ -64,7 +64,7 @@ module.exports = {
 			'skipBlankLines': false
 		}],
 		'one-var': [2, 'never'],         				// http://eslint.org/docs/rules/one-var
-		'padded-blocks': [2, 'never'],   				// http://eslint.org/docs/rules/padded-blocks
+		'padded-blocks': 0,   								// http://eslint.org/docs/rules/padded-blocks
 		'semi': [2, 'always'],								// http://eslint.org/docs/rules/semi
 		'semi-spacing': [2, {            				// http://eslint.org/docs/rules/semi-spacing
 			'before': false,
@@ -86,13 +86,13 @@ module.exports = {
 	/**
 	* Variables
 	*/
-		'no-shadow': 2,                  // http://eslint.org/docs/rules/no-shadow
-		'no-shadow-restricted-names': 2, // http://eslint.org/docs/rules/no-shadow-restricted-names
-		'no-undef': 2,                   // http://eslint.org/docs/rules/no-undef
-		'no-unused-vars': [2, {          // http://eslint.org/docs/rules/no-unused-vars
+		'no-shadow': 0,                  				// http://eslint.org/docs/rules/no-shadow
+		'no-shadow-restricted-names': 2,					// http://eslint.org/docs/rules/no-shadow-restricted-names
+		'no-undef': 2,                   				// http://eslint.org/docs/rules/no-undef
+		'no-unused-vars': [2, {          				// http://eslint.org/docs/rules/no-unused-vars
 			'vars': 'local',
 			'args': 'none'
 		}],
-		'no-use-before-define': 2,       // http://eslint.org/docs/rules/no-use-before-define
+		'no-use-before-define': [2, 'nofunc'],       // http://eslint.org/docs/rules/no-use-before-define
 	}
 };

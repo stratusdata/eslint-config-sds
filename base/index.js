@@ -70,7 +70,6 @@ module.exports = {
 			'before': false,
 			'after': true
 		}],
-		'space-after-keywords': [2, 'always'],			// http://eslint.org/docs/rules/space-after-keywords
 		'space-before-blocks': [2, 'always'],			// http://eslint.org/docs/rules/space-before-blocks
 		'space-before-function-paren': [2, { 			// http://eslint.org/docs/rules/space-before-function-paren
 			'anonymous': 'always',
@@ -78,10 +77,10 @@ module.exports = {
 		}],
 		'space-infix-ops': 2,           					// http://eslint.org/docs/rules/space-infix-ops
 		'space-in-parens': [2, 'never'],					// http://eslint.org/docs/rules/space-in-parens
-		'space-return-throw-case': 2,    				// http://eslint.org/docs/rules/space-return-throw-case
 		'spaced-comment': [0, 'always', {				// http://eslint.org/docs/rules/spaced-comment
 			'exceptions': ['*']
 		}],
+		'keyword-spacing': 2,
 
 	/**
 	* Variables

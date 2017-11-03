@@ -17,9 +17,16 @@
   },
   "homepage": "https://github.com/stratusdata/eslint-config-sds#readme",
   "devDependencies": {
-    "babel-eslint": "^4.1.2",
-    "eslint": "^1.4.3",
+    "eslint": "^2.9.0",
+    "babel-eslint": "^6.1.2",
+    "babel-plugin-__coverage__": "^11.0.0",
     "eslint-plugin-react": "^3.4.1",
-    "react": "^0.13.3"
+    "eslint-config-airbnb": "^8.0.0",
+    "eslint-import-resolver-babel-module": "^2.2.1",
+    "eslint-plugin-babel": "^3.1.0",
+    "eslint-plugin-import": "^1.16.0",
+    "eslint-plugin-jsx-a11y": "^1.0.4",
+    "eslint-plugin-react": "^5.0.1",
+    "eslint-plugin-xo": "^0.4.1"
   }
 }

@@ -1,98 +1,34 @@
 module.exports = {
-	'parser': 'babel-eslint',
-	'env': {
-		'browser': true,
-		'node': true
+	"extends": "airbnb",
+	"parser": "babel-eslint",
+	"plugins": ["xo"],
+	"settings": {
+		"import/resolver": {
+			"babel-module": {}
+		}
 	},
-	'extends': 'eslint:recommended',
-	'rules': {
-		'linebreak-style': [2, 'unix'],
-		'vars-on-top': [0],
-
-		'comma-dangle': 0,							    	// http://eslint.org/docs/rules/comma-dangle
-		'no-cond-assign': [2, 'always'], 				// http://eslint.org/docs/rules/no-cond-assign
-		'no-console': 1,                 				// http://eslint.org/docs/rules/no-console
-		'no-debugger': 1,                				// http://eslint.org/docs/rules/no-debugger
-		'no-alert': 1,                  					// http://eslint.org/docs/rules/no-alert
-		'no-constant-condition': 1,      				// http://eslint.org/docs/rules/no-constant-condition
-		'no-dupe-keys': 2,               				// http://eslint.org/docs/rules/no-dupe-keys
-		'no-duplicate-case': 2,          				// http://eslint.org/docs/rules/no-duplicate-case
-
-		'no-invalid-regexp': 2,								// http://eslint.org/docs/rules/no-invalid-regexp
-		'no-irregular-whitespace': 2,						// http://eslint.org/docs/rules/no-irregular-whitespace
-
-	/**
-	* Style
-	*/
-		'indent': [2, 'tab', { 'SwitchCase': 1 }],	// http://eslint.org/docs/rules/indent
-		'brace-style': [
-			2,               									// http://eslint.org/docs/rules/brace-style
-			'1tbs', {
-				'allowSingleLine': true
-			}
-		],
-		'quotes': [2, 'single', 'avoid-escape'], 		// http://eslint.org/docs/rules/quotes
-		'id-length': [0, {               				// http://eslint.org/docs/rules/id-length
-			'min': 2,
-			'properties': 'never'
+	"rules": {
+		"indent": [2, "tab", { "SwitchCase": 1 }],
+		"react/jsx-indent": [2, "tab"],
+		"react/jsx-indent-props": [2, "tab"],
+		// Use a warning since we'll be framing out a few components
+		// that don't yet use the react lifecycle but will soon..
+		"react/prefer-stateless-function": 1,
+		"max-len": [1, 120, 2, {
+			"ignoreComments": true
 		}],
-		'camelcase': [2, {               				// http://eslint.org/docs/rules/camelcase
-			'properties': 'never'
+		"comma-dangle": 0,
+		"xo/filename-case": ["error", {"case": "kebabCase"}],
+		"no-cond-assign": ["error", "except-parens"],
+		"array-bracket-spacing": 0,
+		"new-cap": [1, { "newIsCap": true, "capIsNew": false }],
+		"no-underscore-dangle": [2, { "allow": [ "_id", "__APP__", "_source" ] }],
+		"no-param-reassign": ["error", { "props": false }],
+		"react/jsx-no-bind": [0, {
+			"ignoreRefs": false,
+			"allowArrowFunctions": false,
+			"allowBind": false
 		}],
-		'comma-spacing': [2, {          					// http://eslint.org/docs/rules/comma-spacing
-			'before': false,
-			'after': true
-		}],
-		'comma-style': [2, 'last'],      				// http://eslint.org/docs/rules/comma-style
-		'eol-last': 1,                  					// http://eslint.org/docs/rules/eol-last
-		'func-names': 1,                				 	// http://eslint.org/docs/rules/func-names
-			'key-spacing': [2, {             			// http://eslint.org/docs/rules/key-spacing
-			'beforeColon': false,
-			'afterColon': true
-		}],
-		'max-len': [1, 120, 2, { 							// http://eslint.org/docs/rules/max-len
-			'ignoreComments': true
-		}],
-		'new-cap': [2, {                 				// http://eslint.org/docs/rules/new-cap
-			'newIsCap': true
-		}],
-		'no-multiple-empty-lines': [2, { 				// http://eslint.org/docs/rules/no-multiple-empty-lines
-			'max': 2
-		}],
-		'no-spaced-func': 2,            					// http://eslint.org/docs/rules/no-spaced-func
-		'no-trailing-spaces': [2, { 						// http://eslint.org/docs/rules/no-trailing-spaces
-			'skipBlankLines': false
-		}],
-		'one-var': [2, 'never'],         				// http://eslint.org/docs/rules/one-var
-		'padded-blocks': 0,   								// http://eslint.org/docs/rules/padded-blocks
-		'semi': [2, 'always'],								// http://eslint.org/docs/rules/semi
-		'semi-spacing': [2, {            				// http://eslint.org/docs/rules/semi-spacing
-			'before': false,
-			'after': true
-		}],
-		'space-after-keywords': [2, 'always'],			// http://eslint.org/docs/rules/space-after-keywords
-		'space-before-blocks': [2, 'always'],			// http://eslint.org/docs/rules/space-before-blocks
-		'space-before-function-paren': [2, { 			// http://eslint.org/docs/rules/space-before-function-paren
-			'anonymous': 'always',
-			'named': 'never'
-		}],
-		'space-infix-ops': 2,           					// http://eslint.org/docs/rules/space-infix-ops
-		'space-in-parens': [2, 'never'],					// http://eslint.org/docs/rules/space-in-parens
-		'space-return-throw-case': 2,    				// http://eslint.org/docs/rules/space-return-throw-case
-		'spaced-comment': [0, 'always', {				// http://eslint.org/docs/rules/spaced-comment
-			'exceptions': ['*']
-		}],
-
-	/**
-	* Variables
-	*/
-		'no-shadow': 0,                  				// http://eslint.org/docs/rules/no-shadow
-		'no-shadow-restricted-names': 2,					// http://eslint.org/docs/rules/no-shadow-restricted-names
-		'no-undef': 2,                   				// http://eslint.org/docs/rules/no-undef
-		'no-unused-vars': [2, {          				// http://eslint.org/docs/rules/no-unused-vars
-			'vars': 'local',
-			'args': 'none'
-		}],
-		'no-use-before-define': [2, 'nofunc'],       // http://eslint.org/docs/rules/no-use-before-define
+		"no-confusing-arrow": ["error", {"allowParens": true}]
 	}
-};
+}
